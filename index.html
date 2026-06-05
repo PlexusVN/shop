@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plexus Store</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="./style.css?v=2">
+  <link rel="stylesheet" href="./style.css?v=4">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -241,6 +241,9 @@
         <button class="sidebar-toggle" id="sidebarToggle" aria-label="Mở menu">
           <i class="fas fa-bars"></i>
         </button>
+        <button class="music-toggle" id="musicToggle" aria-label="Bật nhạc">
+          <i class="fas fa-music"></i>
+        </button>
         <div class="top-bar-right">
           <div class="cart-button" id="cartBtn" onclick="toggleCart()">
             <i class="fas fa-shopping-cart"></i>
@@ -292,6 +295,10 @@
       <!-- Tab: Home -->
       <section class="tab-content active" id="tab-home">
         <div class="banner" id="mainBanner">
+          <video class="banner-bg-video" autoplay loop muted playsinline poster="https://i.pinimg.com/736x/ce/d3/d4/ced3d400cf1d135c7b19da6db8a6981f.jpg">
+            <source src="https://v1.pinimg.com/videos/iht/expMp4/14/d9/0a/14d90a495223922f23fe56a2a320c557_720w.mp4" type="video/mp4">
+          </video>
+          <div class="banner-bg-overlay"></div>
           <div class="banner-speedlines"></div>
           <div class="banner-scanner"></div>
           <div class="banner-slash banner-slash-1"></div>
@@ -302,15 +309,6 @@
           <div class="ink-drip ink-drip-1"></div>
           <div class="ink-drip ink-drip-2"></div>
           <div class="ink-drip ink-drip-3"></div>
-
-          <!-- Manga Character Panel -->
-          <div class="banner-character">
-            <div class="banner-character-inner">
-              <div class="character-silhouette"></div>
-              <div class="character-speedlines"></div>
-              <div class="character-frame"></div>
-            </div>
-          </div>
 
           <!-- Star Burst Effects -->
           <div class="banner-stars">
@@ -1056,6 +1054,10 @@
   <!-- Toast Container -->
   <div id="toastContainer" class="toast-container"></div>
 
-  <script src="./main.js?v=4"></script>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./tungquen.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="./main.js?v=6"></script>
 </body>
 </html>
