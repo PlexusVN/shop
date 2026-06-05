@@ -402,46 +402,51 @@
           <h1>Liên hệ</h1>
           <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
         </div>
-        <div class="contact-grid">
-          <div class="contact-form-wrapper">
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <label for="fullname">Họ tên</label>
-                <input type="text" id="fullname" placeholder="Nhập họ tên của bạn" required>
+        <div class="contact-cards">
+          <!-- Zalo Card -->
+          <a href="https://zalo.me/0342145707" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-zalo">
+            <div class="contact-card-bg"></div>
+            <div class="contact-card-content">
+              <div class="contact-card-icon-wrap">
+                <svg class="contact-card-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="14" rx="3" fill="#fff"/>
+                  <polygon points="7,17 11,17 9,22" fill="#fff"/>
+                  <line x1="7" y1="8" x2="17" y2="8" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="7" y1="12" x2="14" y2="12" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
               </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Nhập email của bạn" required>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Liên hệ qua Zalo</span>
+                <strong class="contact-card-value">0342145707</strong>
+                <span class="contact-card-action">Nhắn tin ngay <i class="fas fa-arrow-right"></i></span>
               </div>
-              <div class="form-group">
-                <label for="message">Nội dung</label>
-                <textarea id="message" rows="5" placeholder="Nhập nội dung liên hệ" required></textarea>
+              <div class="contact-card-arrow">
+                <i class="fas fa-chevron-right"></i>
               </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                <i class="fas fa-paper-plane"></i> Gửi
-              </button>
-            </form>
-          </div>
-          <div class="contact-info">
-            <h3>Thông tin liên hệ</h3>
-            <div class="contact-item">
-              <i class="fab fa-facebook"></i>
-              <span>Facebook: fb.com/plexusstore</span>
             </div>
-            <div class="contact-item">
-              <i class="fab fa-discord"></i>
-              <span>Discord: discord.gg/plexusstore</span>
+          </a>
+
+          <!-- Discord Card -->
+          <a href="https://discord.com/users/trankhai23" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-discord">
+            <div class="contact-card-bg"></div>
+            <div class="contact-card-content">
+              <div class="contact-card-icon-wrap">
+                <i class="fab fa-discord"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Liên hệ qua Discord</span>
+                <strong class="contact-card-value">trankhai23</strong>
+                <span class="contact-card-action">Kết bạn ngay <i class="fas fa-arrow-right"></i></span>
+              </div>
+              <div class="contact-card-arrow">
+                <i class="fas fa-chevron-right"></i>
+              </div>
             </div>
-            <div class="contact-item">
-              <i class="fab fa-telegram"></i>
-              <span>Telegram: @plexusstore</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>Email: support@plexusstore.com</span>
-            </div>
-          </div>
+          </a>
         </div>
+
+        <!-- Ẩn form cũ để tránh lỗi JS (contactForm reference trong main.js) -->
+        <form id="contactForm" style="display:none !important;" aria-hidden="true"></form>
       </section>
 
       <!-- Tab: Deposit - Premium Redesign -->
@@ -737,6 +742,7 @@
             <!-- Orders -->
             <div class="account-panel" id="account-orders">
               <h2>Đơn hàng</h2>
+              <p class="order-loading-note">Key load chậm vì cần mã hóa để bảo mật cho bạn, thông cảm vì sự bất tiện.</p>
               <div class="orders-list" id="ordersList"></div>
             </div>
             <!-- Security -->
@@ -1056,7 +1062,7 @@
   <div id="toastContainer" class="toast-container"></div>
 
   <audio id="bgMusic" loop preload="auto">
-    <source src="./tungquen.mp3" type="audio/mpeg">
+    <source src="./soud/mixi.mp3" type="audio/mpeg">
   </audio>
 
   <script src="./main.js?v=6"></script>
