@@ -2501,15 +2501,19 @@ body::before {
 
   .admin-tabs { gap: 4px; margin-bottom: 14px; }
   .admin-tab-btn { padding: 6px 10px; font-size: 0.65rem; letter-spacing: 1px; border-width: 2px; }
-  .admin-card { padding: 14px; }
-  .admin-card h3 { font-size: 0.85rem; margin-bottom: 12px; }
+  .admin-card { padding: 12px; }
+  .admin-card h3 { font-size: 0.85rem; margin-bottom: 10px; }
   .admin-form { gap: 10px; }
   .admin-form-row { grid-template-columns: 1fr; gap: 10px; }
   .admin-form-actions { flex-direction: column; align-items: stretch; gap: 6px; }
   .admin-form-actions .btn { width: 100%; padding: 10px 16px; font-size: 0.78rem; }
-  .admin-table-item { padding: 8px 10px; gap: 8px; }
+  .admin-table-item { padding: 8px 10px; gap: 6px; flex-wrap: wrap; }
   .admin-table-item .btn-icon { width: 28px; height: 28px; font-size: 0.7rem; }
-  .admin-table-item span { font-size: 0.75rem; }
+  .admin-table-item span { font-size: 0.75rem; word-break: break-all; }
+  .admin-panel, .admin-card, .admin-table { overflow-x: hidden; }
+  .admin-table-item .item-info { min-width: 0; overflow: hidden; }
+  .admin-table-item .item-info h4, .admin-table-item .item-info p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .admin-form input, .admin-form textarea { font-size: 0.82rem !important; }
 
   .depo-card { padding: 18px 14px; }
   .depo-balance-bar { gap: 10px; }
@@ -2551,17 +2555,20 @@ body::before {
   .user-dropdown a { padding: 10px 14px; font-size: 0.8rem; }
 
   /* ── Account panel compact ── */
-  .account-user-card { padding: 18px 12px 16px; }
-  .account-avatar { width: 48px; height: 48px; font-size: 1.1rem; border-width: 2px; margin-bottom: 8px; }
-  .account-user-info h3 { font-size: 0.85rem; }
-  .account-user-info > span { font-size: 0.72rem; }
+  .account-user-card { padding: 14px 10px; }
+  .account-avatar { width: 44px; height: 44px; font-size: 1rem; border-width: 2px; margin-bottom: 6px; }
+  .account-user-card .account-user-info { min-width: 0; overflow: hidden; }
+  .account-user-info h3 { font-size: 0.82rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .account-user-info > span { font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .account-balance { font-size: 0.78rem; margin-top: 2px; }
-  .account-nav { padding: 4px; }
-  .account-nav-item { padding: 9px 10px; font-size: 0.75rem; gap: 8px; }
-  .account-panel { padding: 14px; }
+  .account-nav { padding: 4px; gap: 4px; }
+  .account-nav-item { flex: 0 0 auto; min-width: 80px; padding: 8px 10px; font-size: 0.72rem; gap: 6px; }
+  .account-panel { padding: 12px; overflow-x: hidden; }
   .account-panel h2 { font-size: 0.9rem; }
-  .account-form { gap: 12px; }
+  .account-form { gap: 10px; }
   .account-form .btn { width: 100%; }
+  .account-form input { font-size: 0.82rem !important; }
+  .orders-list { overflow-x: hidden; }
 
   /* ── Admin panel more compact ── */
   .admin-card { margin-bottom: 10px; }
